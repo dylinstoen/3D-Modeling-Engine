@@ -1,0 +1,37 @@
+<RCC>
+    <qresource prefix="/icons/FatCow">
+        <file alias="index.theme">icons/FatCow/index.theme</file>
+        <file alias="16x16/control_end.png">icons/FatCow/16x16/control_end.png</file>
+        <file alias="32x32/control_end.png">icons/FatCow/32x32/control_end.png</file>
+        <file alias="16x16/control_pause.png">icons/FatCow/16x16/control_pause.png</file>
+        <file alias="32x32/control_pause.png">icons/FatCow/32x32/control_pause.png</file>
+        <file alias="16x16/control_pause_record.png">icons/FatCow/16x16/control_pause_record.png</file>
+        <file alias="32x32/control_pause_record.png">icons/FatCow/32x32/control_pause_record.png</file>
+        <file alias="16x16/control_play.png">icons/FatCow/16x16/control_play.png</file>
+        <file alias="32x32/control_play.png">icons/FatCow/32x32/control_play.png</file>
+        <file alias="16x16/control_start.png">icons/FatCow/16x16/control_start.png</file>
+        <file alias="32x32/control_start.png">icons/FatCow/32x32/control_start.png</file>
+        <file alias="16x16/bullet_red.png">icons/FatCow/16x16/bullet_red.png</file>
+        <file alias="32x32/bullet_red.png">icons/FatCow/32x32/bullet_red.png</file>
+        <file alias="16x16/control_stop.png">icons/FatCow/16x16/control_stop.png</file>
+        <file alias="32x32/control_stop.png">icons/FatCow/32x32/control_stop.png</file>
+        <file alias="16x16/picture_add.png">icons/FatCow/16x16/picture_add.png</file>
+        <file alias="32x32/picture_add.png">icons/FatCow/32x32/picture_add.png</file>
+        <file alias="16x16/diskette.png">icons/FatCow/16x16/diskette.png</file>
+        <file alias="32x32/diskette.png">icons/FatCow/32x32/diskette.png</file>
+        <file alias="16x16/folder.png">icons/FatCow/16x16/folder.png</file>
+        <file alias="32x32/folder.png">icons/FatCow/32x32/folder.png</file>
+        <file alias="16x16/cursor.png">icons/FatCow/16x16/cursor.png</file>
+        <file alias="32x32/cursor.png">icons/FatCow/32x32/cursor.png</file>
+        <file alias="16x16/transform_move.png">icons/FatCow/16x16/transform_move.png</file>
+        <file alias="32x32/transform_move.png">icons/FatCow/32x32/transform_move.png</file>
+        <file alias="16x16/transform_rotate.png">icons/FatCow/16x16/transform_rotate.png</file>
+        <file alias="32x32/transform_rotate.png">icons/FatCow/32x32/transform_rotate.png</file>
+        <file alias="16x16/transform_scale.png">icons/FatCow/16x16/transform_scale.png</file>
+        <file alias="32x32/transform_scale.png">icons/FatCow/32x32/transform_scale.png</file>
+        <file alias="16x16/bin_empty.png">icons/FatCow/16x16/bin_empty.png</file>
+        <file alias="32x32/bin_empty.png">icons/FatCow/32x32/bin_empty.png</file>
+        <file alias="16x16/clipboard_sign.png">icons/FatCow/16x16/clipboard_sign.png</file>
+        <file alias="32x32/clipboard_sign.png">icons/FatCow/32x32/clipboard_sign.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,551 @@
+Name: wip
+Animation Length: 20
+Animation FPS: 30
+Textures:
+    Checkers Texture:
+        Bilinear: true
+        Path: assets/checkers.png
+Cubemaps:
+    {}
+Meshes:
+    {}
+Materials:
+    Blinn-Phong Material:
+        Shader: Blinn-Phong Shader
+        Uniforms:
+            Diffuse:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0.75
+                Color Map: ""
+                Use Texture: false
+            Emissive:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+            IndexOfRefraction: 1
+            Shininess: 20
+            Specular:
+                Color:
+                    A:  1
+                    B:  0.5
+                    G:  0.5
+                    R:  0.5
+                Color Map: ""
+                Use Texture: false
+            Transmittence:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+    Depth Map Material:
+        Shader: Depth Shader
+        Uniforms:
+            {}
+    Emissive:
+        Shader: Emissive Shader
+        Uniforms:
+            AmbientColor:
+                A:  1
+                B:  1
+                G:  1
+                R:  1
+            Color:
+                A:  1
+                B:  1
+                G:  1
+                R:  1
+            ConstantAttenuation: 1
+            LinearAttenuation: 0
+            QuadraticAttenuation: 0
+    Gray:
+        Shader: Blinn-Phong Shader
+        Uniforms:
+            Diffuse:
+                Color:
+                    A:  1
+                    B:  0.70196
+                    G:  0.70196
+                    R:  0.70196
+                Color Map: ""
+                Use Texture: false
+            Emissive:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+            IndexOfRefraction: 1
+            Shininess: 20
+            Specular:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+            Transmittence:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+    Green:
+        Shader: Blinn-Phong Shader
+        Uniforms:
+            Diffuse:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0.70196
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+            Emissive:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+            IndexOfRefraction: 1
+            Shininess: 20
+            Specular:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+            Transmittence:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+    Red:
+        Shader: Blinn-Phong Shader
+        Uniforms:
+            Diffuse:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0.70196
+                Color Map: ""
+                Use Texture: false
+            Emissive:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+            IndexOfRefraction: 1
+            Shininess: 20
+            Specular:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+            Transmittence:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+    Textured Material:
+        Shader: Textured Shader
+        Uniforms:
+            DiffuseMap:
+                Color:
+                    A:  1
+                    B:  0.5
+                    G:  0.5
+                    R:  0.5
+                Color Map: Checkers Texture
+                Use Texture: true
+    Toon Material:
+        Shader: Toon Shader
+        Uniforms:
+            Diffuse:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0.75
+                Color Map: ""
+                Use Texture: false
+            Emissive:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+            IndexOfRefraction: 1
+            Shininess: 20
+            Specular:
+                Color:
+                    A:  1
+                    B:  0.5
+                    G:  0.5
+                    R:  0.5
+                Color Map: ""
+                Use Texture: false
+            Transmittence:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+ShaderPrograms:
+    Blinn-Phong Shader:
+        Fragment: ""
+        Geometry: ""
+        Trace Compatible: true
+        Vertex: ""
+    Depth Shader:
+        Fragment: ""
+        Geometry: ""
+        Trace Compatible: false
+        Vertex: assets/internal/position.vert
+    Emissive Shader:
+        Fragment: assets/emissive.frag
+        Geometry: ""
+        Trace Compatible: false
+        Vertex: ""
+    Textured Shader:
+        Fragment: assets/texture.frag
+        Geometry: ""
+        Trace Compatible: false
+        Vertex: assets/texture.vert
+    Toon Shader:
+        Fragment: ""
+        Geometry: ""
+        Trace Compatible: true
+        Vertex: ""
+Root:
+    Name: Root
+    Enabled: true
+    Components:
+        Transform:
+            Rotation:
+                X:  0
+                Y:  0
+                Z:  0
+            Scale:
+                X:  1
+                Y:  1
+                Z:  1
+            Translation:
+                X:  0
+                Y:  0
+                Z:  0
+    Children:
+        -   Name: Render Camera
+            Enabled: true
+            Components:
+                Camera:
+                    FOV: 40
+                    Far Plane: 100
+                    Near Plane: 0.1
+                    Orthographic View Width: 5
+                    Perspective Camera?: true
+                    Render Height (px): 512
+                    Render Width (px): 512
+                    Trace:
+                        Aperture Size: 0
+                        Caustics: false
+                        Difference Threshold: 0.02
+                        Diffuse Reflection: true
+                        Enable BVH Acceleration: true
+                        Focus Distance: 1
+                        Maximum Recursion Depth: 5
+                        Maximum Samples: 3
+                        Minimum Samples: 0
+                        Monte Carlo: 2
+                        Random Single Branching: false
+                        Reflections: true
+                        Refractions: true
+                        Sample Count Type: 0
+                        Samples Per Pixel: 3
+                        Shadows: 2
+                        Std. Error Threshold: 0.02
+                    Trace Debugger:
+                        Show Diffuse Reflection Rays: true
+                        Show Reflection Rays: true
+                        Show Refraction Rays: true
+                        Show Shadow Rays: true
+                        Show Surface Normals: true
+                Transform:
+                    Rotation:
+                        X:  0
+                        Y:  0
+                        Z:  0
+                    Scale:
+                        X:  1
+                        Y:  1
+                        Z:  1
+                    Translation:
+                        X:  0
+                        Y:  1.5
+                        Z:  7
+            Children:
+                []
+        -   Name: Sphere
+            Enabled: true
+            Components:
+                Sphere:
+                    Material: Gray
+                    Quality: 4
+                Transform:
+                    Rotation:
+                        X:  0
+                        Y:  0
+                        Z:  0
+                    Scale:
+                        X:  1
+                        Y:  1
+                        Z:  1
+                    Translation:
+                        X:  0.61724
+                        Y:  0.49999
+                        Z:  2.1064
+            Children:
+                []
+        -   Name: Plane 1
+            Enabled: true
+            Components:
+                Plane:
+                    Material: Gray
+                    Subdivisions: 0
+                Transform:
+                    Rotation:
+                        X:  0
+                        Y:  0
+                        Z:  0
+                    Scale:
+                        X:  3
+                        Y:  3
+                        Z:  1
+                    Translation:
+                        X:  0
+                        Y:  1.5
+                        Z:  0
+            Children:
+                []
+        -   Name: Plane 2
+            Enabled: true
+            Components:
+                Plane:
+                    Material: Green
+                    Subdivisions: 0
+                Transform:
+                    Rotation:
+                        X:  0
+                        Y:  90
+                        Z:  0
+                    Scale:
+                        X:  3
+                        Y:  3
+                        Z:  1
+                    Translation:
+                        X:  1.5
+                        Y:  1.5
+                        Z:  1.5
+            Children:
+                []
+        -   Name: Plane 3
+            Enabled: true
+            Components:
+                Plane:
+                    Material: Red
+                    Subdivisions: 0
+                Transform:
+                    Rotation:
+                        X:  0
+                        Y:  90
+                        Z:  0
+                    Scale:
+                        X:  3
+                        Y:  3
+                        Z:  1
+                    Translation:
+                        X:  -1.5
+                        Y:  1.5
+                        Z:  1.5
+            Children:
+                []
+        -   Name: Plane 4
+            Enabled: true
+            Components:
+                Plane:
+                    Material: Gray
+                    Subdivisions: 0
+                Transform:
+                    Rotation:
+                        X:  90
+                        Y:  0
+                        Z:  0
+                    Scale:
+                        X:  3
+                        Y:  3
+                        Z:  1
+                    Translation:
+                        X:  0
+                        Y:  0
+                        Z:  1.5
+            Children:
+                []
+        -   Name: Plane 5
+            Enabled: true
+            Components:
+                Plane:
+                    Material: Gray
+                    Subdivisions: 0
+                Transform:
+                    Rotation:
+                        X:  90
+                        Y:  0
+                        Z:  0
+                    Scale:
+                        X:  3
+                        Y:  3
+                        Z:  1
+                    Translation:
+                        X:  0
+                        Y:  3
+                        Z:  1.5
+            Children:
+                []
+        -   Name: Translate
+            Enabled: true
+            Components:
+                Transform:
+                    Rotation:
+                        X:  0
+                        Y:  0
+                        Z:  0
+                    Scale:
+                        X:  1
+                        Y:  1
+                        Z:  1
+                    Translation:
+                        X:  -0.60634
+                        Y:  0.74989
+                        Z:  1.2419
+            Children:
+                -   Name: Cube 3
+                    Enabled: true
+                    Components:
+                        TriangleMesh:
+                            LoopSubdivision: 0
+                            Material: Gray
+                            Mesh: Cube
+                        Transform:
+                            Rotation:
+                                X:  0
+                                Y:  21.373
+                                Z:  0
+                            Scale:
+                                X:  0.8
+                                Y:  1.5
+                                Z:  0.8
+                            Translation:
+                                X:  -0.044442
+                                Y:  0
+                                Z:  -0.16774
+                    Children:
+                        []
+        -   Name: Area Light 1
+            Enabled: true
+            Components:
+                AreaLight:
+                    Ambient:
+                        A:  1
+                        B:  0
+                        G:  0
+                        R:  0
+                    Color:
+                        A:  1
+                        B:  1
+                        G:  1
+                        R:  1
+                    Const Atten: 1e-05
+                    Linear Atten: 1e-05
+                    Quad Atten: 1e-05
+                Transform:
+                    Rotation:
+                        X:  180
+                        Y:  0
+                        Z:  0
+                    Scale:
+                        X:  0.7
+                        Y:  1
+                        Z:  0.7
+                    Translation:
+                        X:  0
+                        Y:  2.98
+                        Z:  1.5
+            Children:
+                []
+        -   Name: Area Light 1 2
+            Enabled: true
+            Components:
+                AreaLight:
+                    Ambient:
+                        A:  1
+                        B:  0
+                        G:  0
+                        R:  0
+                    Color:
+                        A:  1
+                        B:  1
+                        G:  1
+                        R:  1
+                    Const Atten: 3
+                    Linear Atten: 1e-05
+                    Quad Atten: 1e-05
+                Transform:
+                    Rotation:
+                        X:  180
+                        Y:  0
+                        Z:  0
+                    Scale:
+                        X:  0.7
+                        Y:  1
+                        Z:  0.7
+                    Translation:
+                        X:  0
+                        Y:  2.98
+                        Z:  1.5
+            Children:
+                []

@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>icons/cone.png</file>
+        <file>icons/cube.png</file>
+        <file>icons/cylinder.png</file>
+        <file>icons/empty.png</file>
+        <file>icons/knot.png</file>
+        <file>icons/plane.png</file>
+        <file>icons/sphere.png</file>
+        <file>icons/teapot.png</file>
+        <file>icons/material.png</file>
+        <file>icons/mesh.png</file>
+        <file>icons/shader.png</file>
+        <file>icons/cubemap.png</file>
+        <file>icons/texture.png</file>
+        <file>icons/vertexedit.png</file>        
+        <file>icons/edit.png</file>
+        <file>icons/unknown.png</file>
+    </qresource>
+</RCC>

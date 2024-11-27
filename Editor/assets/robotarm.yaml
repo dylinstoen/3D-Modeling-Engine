@@ -1,0 +1,380 @@
+Name: robot
+Animation Length: 20
+Animation FPS: 30
+Textures:
+    Checkers Texture: 
+        Bilinear: true
+        Path: assets/checkers.png
+Cubemaps:
+    {}
+Meshes:
+    Buddha: 
+        Path: assets/buddha.ply
+    Dragon: 
+        Path: assets/dragon.ply
+    Spikey: 
+        Path: assets/spikey.obj
+    Teapot: 
+        Path: assets/teapot.obj
+Materials:
+    Blinn-Phong Material:
+        Shader: Blinn-Phong Shader
+        Uniforms:
+            Diffuse:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  1
+                Color Map: ""
+                Use Texture: false
+            ShadowBias: 0.03
+            Shininess: 20
+            Specular:
+                Color:
+                    A:  1
+                    B:  1
+                    G:  1
+                    R:  1
+                ColorMap: ""
+                Use Texture: false
+    Depth Map Material:
+        Shader: Depth Shader
+        Uniforms:
+            {}
+    Emissive:
+        Shader: Emissive Shader
+        Uniforms:
+            AmbientColor:
+                A:  1
+                B:  1
+                G:  1
+                R:  1
+            Color:
+                A:  1
+                B:  1
+                G:  1
+                R:  1
+            ConstantAttenuation: 1
+            LinearAttenuation: 0
+            QuadraticAttenuation: 0
+    Green Material:
+        Shader: Blinn-Phong Shader
+        Uniforms:
+            Shininess: 20
+            Diffuse:
+                Color:
+                    A:  1
+                    B:  0.13333
+                    G:  0.78039
+                    R:  0.14118
+                Color Map: ""
+                Use Texture: false
+            Specular:
+                Color:
+                    A:  1
+                    B:  1
+                    G:  1
+                    R:  1
+                ColorMap: ""
+                Use Texture: false
+            ShadowBias: 0
+    Gray Material:
+        Shader: Blinn-Phong Shader
+        Uniforms:
+            Shininess: 20
+            Diffuse:
+                Color:
+                    A:  1
+                    B:  0.55294
+                    G:  0.55294
+                    R:  0.55294
+                Color Map: ""
+                Use Texture: false
+            Specular:
+                Color:
+                    A:  1
+                    B:  1
+                    G:  1
+                    R:  1
+                ColorMap: ""
+                Use Texture: false
+            ShadowBias: 0
+    Textured Material:
+        Shader: Textured Shader
+        Uniforms:
+            DiffuseMap:
+                Color:
+                    A:  1
+                    B:  0.5
+                    G:  0.5
+                    R:  0.5
+                Color Map: Checkers Texture
+                Use Texture: true
+ShaderPrograms:
+    Blinn-Phong Shader:
+        Fragment: ""
+        Geometry: ""
+        Trace Compatible: true
+        Vertex: ""
+    Depth Shader:
+        Fragment: ""
+        Geometry: ""
+        Trace Compatible: false
+        Vertex: assets/internal/position.vert
+    Emissive Shader:
+        Fragment: assets/emissive.frag
+        Geometry: ""
+        Trace Compatible: false
+        Vertex: ""
+    Textured Shader:
+        Fragment: assets/texture.frag
+        Geometry: ""
+        Trace Compatible: false
+        Vertex: assets/texture.vert
+
+Root:
+    Name: Root
+    Enabled: true
+    Components:
+        Transform:
+            Rotation:
+                X:  0
+                Y:  0
+                Z:  0
+            Scale:
+                X:  1
+                Y:  1
+                Z:  1
+            Translation:
+                X:  0
+                Y:  0
+                Z:  0
+    Children:
+        -   Name: Render Camera
+            Enabled: true
+            Components:
+                Transform:
+                    Rotation:
+                        X:  0
+                        Y:  0
+                        Z:  0
+                    Scale:
+                        X:  1
+                        Y:  1
+                        Z:  1
+                    Translation:
+                        X:  0
+                        Y:  0
+                        Z:  2.5
+                Camera:
+                    FOV: 50
+                    Far Plane: 100
+                    Near Plane: 0.1
+                    Orthographic View Width: 5
+                    Perspective Camera?: true
+                    Render Height (px): 720
+                    Render Width (px): 1280
+                    Trace:
+                        Aperture Size: 0
+                        Caustics: true
+                        Difference Threshold: 0.02
+                        Diffuse Reflection: true
+                        Enable BVH Acceleration: true
+                        Enable Shadows: true
+                        Focus Distance: 1
+                        Maximum Recursion Depth: 5
+                        Maximum Samples: 2
+                        Minimum Samples: 0
+                        Monte Carlo: 0
+                        Random Single Branching: true
+                        Sample Count Type: 0
+                        Samples Per Pixel: 0
+                        Std. Error Threshold: 0.02
+                    Trace Debugger:
+                        Show Diffuse Reflection Rays: true
+                        Show Reflection Rays: true
+                        Show Refraction Rays: true
+                        Show Shadow Rays: true
+                        Show Surface Normals: true
+            Children:
+                []
+        -   Name: Key Light
+            Enabled: true
+            Components:
+                Transform:
+                    Rotation:
+                        X:  45
+                        Y:  45
+                        Z:  0
+                    Scale:
+                        X:  1
+                        Y:  1
+                        Z:  1
+                    Translation:
+                        X:  0
+                        Y:  3.2335
+                        Z:  1.4142
+                DirectionalLight:
+                    Ambient:
+                        A:  1
+                        B:  0
+                        G:  0
+                        R:  0
+                    Angular Size (Trace): 0
+                    Color:
+                        A:  1
+                        B:  1
+                        G:  1
+                        R:  1
+                    Intensity Multiplier: 1.5
+            Children:
+                []
+        -   Name: Fill Light
+            Enabled: true
+            Components:
+                Transform:
+                    Rotation:
+                        X:  -135
+                        Y:  45
+                        Z:  0
+                    Scale:
+                        X:  1
+                        Y:  1
+                        Z:  1
+                    Translation:
+                        X:  0
+                        Y:  -1.4142
+                        Z:  -1.4142
+                DirectionalLight:
+                    Ambient:
+                        A:  1
+                        B:  0
+                        G:  0
+                        R:  0
+                    Angular Size (Trace): 0
+                    Color:
+                        A:  1
+                        B:  0
+                        G:  0
+                        R:  0.3
+                    Intensity Multiplier: 1
+            Children:
+                []
+        -   Name: Base
+            Enabled: true
+            Components:
+                Transform:
+                    Rotation:
+                        X:  0
+                        Y:  47
+                        Z:  0
+                    Scale:
+                        X:  1
+                        Y:  1
+                        Z:  1
+                    Translation:
+                        X:  0
+                        Y:  0
+                        Z:  0
+            Children:
+                -   Name: Cylinder 1
+                    Enabled: true
+                    Components:
+                        Transform:
+                            Rotation:
+                                X:  -4.3957e-006
+                                Y:  -3.8969e-006
+                                Z:  -2.9333e-006
+                            Scale:
+                                X:  1
+                                Y:  0.5
+                                Z:  1
+                            Translation:
+                                X:  0
+                                Y:  0.25
+                                Z:  0
+                        Cylinder:
+                            Material: Green Material
+                            Subdivisions: 3
+                    Children:
+                        []
+                -   Name: Upper Arm
+                    Enabled: true
+                    Components:
+                        Transform:
+                            Rotation:
+                                X:  30
+                                Y:  0
+                                Z:  0
+                            Scale:
+                                X:  1
+                                Y:  1
+                                Z:  1
+                            Translation:
+                                X:  0
+                                Y:  0.5
+                                Z:  0
+                    Children:
+                        -   Name: Cube 1
+                            Enabled: true
+                            Components:
+                                Transform:
+                                    Rotation:
+                                        X:  0
+                                        Y:  0
+                                        Z:  0
+                                    Scale:
+                                        X:  0.2
+                                        Y:  1.2
+                                        Z:  0.2
+                                    Translation:
+                                        X:  0
+                                        Y:  0.6
+                                        Z:  0
+                                TriangleMesh:
+                                    LoopSubdivision: 0
+                                    Material: Gray Material
+                                    Mesh: Cube
+                            Children:
+                                []
+                        -   Name: Lower Arm
+                            Enabled: true
+                            Components:
+                                Transform:
+                                    Rotation:
+                                        X:  72
+                                        Y:  0
+                                        Z:  0
+                                    Scale:
+                                        X:  1
+                                        Y:  1
+                                        Z:  1
+                                    Translation:
+                                        X:  1.3715e-009
+                                        Y:  1.2
+                                        Z:  0
+                            Children:
+                                -   Name: Cube 2
+                                    Enabled: true
+                                    Components:
+                                        Transform:
+                                            Rotation:
+                                                X:  4.8223e-007
+                                                Y:  1.0763e-007
+                                                Z:  2.5192e-007
+                                            Scale:
+                                                X:  0.2
+                                                Y:  0.8
+                                                Z:  0.2
+                                            Translation:
+                                                X:  -3.1512e-009
+                                                Y:  0.4
+                                                Z:  -3.043e-009
+                                        TriangleMesh:
+                                            LoopSubdivision: 0
+                                            Material: Blinn-Phong Material
+                                            Mesh: Cube
+                                    Children:
+                                        []
+

@@ -1,0 +1,569 @@
+Name: sphere_refract
+Animation Length: 20
+Animation FPS: 30
+Textures:
+    Checkers Texture:
+        Bilinear: true
+        Path: assets/checkers.png
+Cubemaps:
+    {}
+Meshes:
+    {}
+Materials:
+    Blinn-Phong Material:
+        Shader: Blinn-Phong Shader
+        Uniforms:
+            Diffuse:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0.75
+                Color Map: ""
+                Use Texture: false
+            Emissive:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+            IndexOfRefraction: 1
+            Shininess: 20
+            Specular:
+                Color:
+                    A:  1
+                    B:  0.5
+                    G:  0.5
+                    R:  0.5
+                Color Map: ""
+                Use Texture: false
+            Transmittence:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+    Depth Map Material:
+        Shader: Depth Shader
+        Uniforms:
+            {}
+    Emissive:
+        Shader: Emissive Shader
+        Uniforms:
+            AmbientColor:
+                A:  1
+                B:  1
+                G:  1
+                R:  1
+            Color:
+                A:  1
+                B:  1
+                G:  1
+                R:  1
+            ConstantAttenuation: 1
+            LinearAttenuation: 0
+            QuadraticAttenuation: 0
+    Lens:
+        Shader: Blinn-Phong Shader
+        Uniforms:
+            Diffuse:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0.11765
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+            Emissive:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+            IndexOfRefraction: 1.5
+            Shininess: 0
+            Specular:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+            Transmittence:
+                Color:
+                    A:  1
+                    B:  0.7
+                    G:  0.7
+                    R:  0.7
+                Color Map: ""
+                Use Texture: false
+    Orange:
+        Shader: Blinn-Phong Shader
+        Uniforms:
+            Diffuse:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+            Emissive:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0.4
+                    R:  0.8
+                Color Map: ""
+                Use Texture: false
+            IndexOfRefraction: 1
+            Shininess: 0
+            Specular:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+            Transmittence:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+    Pink:
+        Shader: Blinn-Phong Shader
+        Uniforms:
+            Diffuse:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+            Emissive:
+                Color:
+                    A:  1
+                    B:  0.4
+                    G:  0
+                    R:  0.8
+                Color Map: ""
+                Use Texture: false
+            IndexOfRefraction: 1
+            Shininess: 0
+            Specular:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+            Transmittence:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+    Textured Material:
+        Shader: Textured Shader
+        Uniforms:
+            DiffuseMap:
+                Color:
+                    A:  1
+                    B:  0.5
+                    G:  0.5
+                    R:  0.5
+                Color Map: Checkers Texture
+                Use Texture: true
+    Toon Material:
+        Shader: Toon Shader
+        Uniforms:
+            Diffuse:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0.75
+                Color Map: ""
+                Use Texture: false
+            Emissive:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+            IndexOfRefraction: 1
+            Shininess: 20
+            Specular:
+                Color:
+                    A:  1
+                    B:  0.5
+                    G:  0.5
+                    R:  0.5
+                Color Map: ""
+                Use Texture: false
+            Transmittence:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+ShaderPrograms:
+    Blinn-Phong Shader:
+        Fragment: ""
+        Geometry: ""
+        Trace Compatible: true
+        Vertex: ""
+    Depth Shader:
+        Fragment: ""
+        Geometry: ""
+        Trace Compatible: false
+        Vertex: assets/internal/position.vert
+    Emissive Shader:
+        Fragment: assets/emissive.frag
+        Geometry: ""
+        Trace Compatible: false
+        Vertex: ""
+    Textured Shader:
+        Fragment: assets/texture.frag
+        Geometry: ""
+        Trace Compatible: false
+        Vertex: assets/texture.vert
+    Toon Shader:
+        Fragment: ""
+        Geometry: ""
+        Trace Compatible: true
+        Vertex: ""
+Root:
+    Name: Root
+    Enabled: true
+    Components:
+        Transform:
+            Rotation:
+                X:  0
+                Y:  0
+                Z:  0
+            Scale:
+                X:  1
+                Y:  1
+                Z:  1
+            Translation:
+                X:  0
+                Y:  0
+                Z:  0
+    Children:
+        -   Name: camera
+            Enabled: true
+            Components:
+                Transform:
+                    Rotation:
+                        X:  0
+                        Y:  0
+                        Z:  0
+                    Scale:
+                        X:  1
+                        Y:  1
+                        Z:  1
+                    Translation:
+                        X:  0
+                        Y:  0
+                        Z:  5
+                Camera:
+                    FOV: 53.13
+                    Far Plane: 100
+                    Near Plane: 0.1
+                    Orthographic View Width: 5
+                    Perspective Camera?: true
+                    Render Height (px): 512
+                    Render Width (px): 512
+                    Trace:
+                        Aperture Size: 0
+                        Caustics: true
+                        Difference Threshold: 0.02
+                        Diffuse Reflection: true
+                        Enable BVH Acceleration: true
+                        Focus Distance: 1
+                        Maximum Recursion Depth: 3
+                        Maximum Samples: 2
+                        Minimum Samples: 0
+                        Monte Carlo: 0
+                        Random Single Branching: true
+                        Reflections: true
+                        Refractions: true
+                        Sample Count Type: 0
+                        Samples Per Pixel: 0
+                        Shadows: 2
+                        Std. Error Threshold: 0.02
+                    Trace Debugger:
+                        Show Diffuse Reflection Rays: true
+                        Show Reflection Rays: true
+                        Show Refraction Rays: true
+                        Show Shadow Rays: true
+                        Show Surface Normals: true
+            Children:
+                []
+        -   Name: rotate
+            Enabled: true
+            Components:
+                Transform:
+                    Rotation:
+                        X:  90
+                        Y:  0
+                        Z:  -45
+                    Scale:
+                        X:  1
+                        Y:  1
+                        Z:  1
+                    Translation:
+                        X:  2
+                        Y:  2
+                        Z:  2
+            Children:
+                -   Name: directional_light
+                    Enabled: true
+                    Components:
+                        Transform:
+                            Rotation:
+                                X:  -11.309
+                                Y:  -7.5365e-09
+                                Z:  2.3131e-07
+                            Scale:
+                                X:  1
+                                Y:  1
+                                Z:  1
+                            Translation:
+                                X:  0
+                                Y:  0
+                                Z:  0
+                        DirectionalLight:
+                            Ambient:
+                                A:  1
+                                B:  0
+                                G:  0
+                                R:  0
+                            Angular Size (Trace): 0
+                            Color:
+                                A:  1
+                                B:  1
+                                G:  1
+                                R:  1
+                            Intensity Multiplier: 1
+                    Children:
+                        []
+        -   Name: translate
+            Enabled: true
+            Components:
+                Transform:
+                    Rotation:
+                        X:  0
+                        Y:  0
+                        Z:  0
+                    Scale:
+                        X:  1
+                        Y:  1
+                        Z:  1
+                    Translation:
+                        X:  -1
+                        Y:  0
+                        Z:  -2
+            Children:
+                -   Name: stretch_cyl
+                    Enabled: true
+                    Components:
+                        Transform:
+                            Rotation:
+                                X:  0
+                                Y:  0
+                                Z:  0
+                            Scale:
+                                X:  0.2
+                                Y:  20
+                                Z:  0.2
+                            Translation:
+                                X:  0
+                                Y:  0
+                                Z:  0
+                    Children:
+                        -   Name: recenter_cyl
+                            Enabled: true
+                            Components:
+                                Transform:
+                                    Rotation:
+                                        X:  0
+                                        Y:  0
+                                        Z:  0
+                                    Scale:
+                                        X:  2
+                                        Y:  1
+                                        Z:  2
+                                    Translation:
+                                        X:  0
+                                        Y:  0
+                                        Z:  0
+                            Children:
+                                -   Name: cylinder_perp
+                                    Enabled: true
+                                    Components:
+                                        Transform:
+                                            Rotation:
+                                                X:  0
+                                                Y:  0
+                                                Z:  0
+                                            Scale:
+                                                X:  1
+                                                Y:  1
+                                                Z:  1
+                                            Translation:
+                                                X:  0
+                                                Y:  0
+                                                Z:  0
+                                        Cylinder:
+                                            Material: Orange
+                                            Subdivisions: 3
+                                    Children:
+                                        []
+        -   Name: translate
+            Enabled: true
+            Components:
+                Transform:
+                    Rotation:
+                        X:  0
+                        Y:  0
+                        Z:  0
+                    Scale:
+                        X:  1
+                        Y:  1
+                        Z:  1
+                    Translation:
+                        X:  0.5
+                        Y:  0
+                        Z:  0
+            Children:
+                -   Name: rotate
+                    Enabled: true
+                    Components:
+                        Transform:
+                            Rotation:
+                                X:  0
+                                Y:  0
+                                Z:  34.376
+                            Scale:
+                                X:  1
+                                Y:  1
+                                Z:  1
+                            Translation:
+                                X:  0
+                                Y:  0
+                                Z:  0
+                    Children:
+                        -   Name: translate
+                            Enabled: true
+                            Components:
+                                Transform:
+                                    Rotation:
+                                        X:  0
+                                        Y:  0
+                                        Z:  0
+                                    Scale:
+                                        X:  1
+                                        Y:  1
+                                        Z:  1
+                                    Translation:
+                                        X:  -1
+                                        Y:  0
+                                        Z:  -2
+                            Children:
+                                -   Name: stretch_cyl
+                                    Enabled: true
+                                    Components:
+                                        Transform:
+                                            Rotation:
+                                                X:  0
+                                                Y:  0
+                                                Z:  0
+                                            Scale:
+                                                X:  0.2
+                                                Y:  20
+                                                Z:  0.2
+                                            Translation:
+                                                X:  0
+                                                Y:  0
+                                                Z:  0
+                                    Children:
+                                        -   Name: recenter_cyl
+                                            Enabled: true
+                                            Components:
+                                                Transform:
+                                                    Rotation:
+                                                        X:  0
+                                                        Y:  0
+                                                        Z:  0
+                                                    Scale:
+                                                        X:  2
+                                                        Y:  1
+                                                        Z:  2
+                                                    Translation:
+                                                        X:  0
+                                                        Y:  0
+                                                        Z:  0
+                                            Children:
+                                                -   Name: cylinder_ang
+                                                    Enabled: true
+                                                    Components:
+                                                        Transform:
+                                                            Rotation:
+                                                                X:  0
+                                                                Y:  0
+                                                                Z:  0
+                                                            Scale:
+                                                                X:  1
+                                                                Y:  1
+                                                                Z:  1
+                                                            Translation:
+                                                                X:  0
+                                                                Y:  0
+                                                                Z:  0
+                                                        Cylinder:
+                                                            Material: Pink
+                                                            Subdivisions: 4
+                                                    Children:
+                                                        []
+        -   Name: Sphere 1
+            Enabled: true
+            Components:
+                Transform:
+                    Rotation:
+                        X:  0
+                        Y:  0
+                        Z:  0
+                    Scale:
+                        X:  3
+                        Y:  3
+                        Z:  0.4
+                    Translation:
+                        X:  0
+                        Y:  0
+                        Z:  0
+                Sphere:
+                    Material: Lens
+                    Quality: 4
+            Children:
+                []

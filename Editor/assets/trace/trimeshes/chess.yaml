@@ -1,0 +1,716 @@
+Name: chess
+Animation Length: 20
+Animation FPS: 30
+Textures:
+    Checkers Texture:
+        Bilinear: true
+        Path: assets/checkers.png
+Cubemaps:
+    {}
+Meshes:
+    knight:
+        Path: assets/trace/trimeshes/knight.ply
+    pawn:
+        Path: assets/trace/trimeshes/pawn.ply
+    table1:
+        Path: assets/trace/trimeshes/table1.ply
+    table2:
+        Path: assets/trace/trimeshes/table2.ply
+Materials:
+    Blinn-Phong Material:
+        Shader: Blinn-Phong Shader
+        Uniforms:
+            Diffuse:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0.75
+                Color Map: ""
+                Use Texture: false
+            Emissive:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+            IndexOfRefraction: 1
+            Shininess: 20
+            Specular:
+                Color:
+                    A:  1
+                    B:  0.5
+                    G:  0.5
+                    R:  0.5
+                Color Map: ""
+                Use Texture: false
+            Transmittence:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+    Brown:
+        Shader: Blinn-Phong Shader
+        Uniforms:
+            Diffuse:
+                Color:
+                    A:  1
+                    B:  0.2
+                    G:  0.30196
+                    R:  0.49804
+                Color Map: ""
+                Use Texture: false
+            Emissive:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+            IndexOfRefraction: 1
+            Shininess: 20
+            Specular:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+            Transmittence:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+    Dark brown:
+        Shader: Blinn-Phong Shader
+        Uniforms:
+            Diffuse:
+                Color:
+                    A:  1
+                    B:  0.10196
+                    G:  0.2
+                    R:  0.4
+                Color Map: ""
+                Use Texture: false
+            Emissive:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+            IndexOfRefraction: 1
+            Shininess: 20
+            Specular:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+            Transmittence:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+    Depth Map Material:
+        Shader: Depth Shader
+        Uniforms:
+            {}
+    Emissive:
+        Shader: Emissive Shader
+        Uniforms:
+            AmbientColor:
+                A:  1
+                B:  1
+                G:  1
+                R:  1
+            Color:
+                A:  1
+                B:  1
+                G:  1
+                R:  1
+            ConstantAttenuation: 1
+            LinearAttenuation: 0
+            QuadraticAttenuation: 0
+    Gray:
+        Shader: Blinn-Phong Shader
+        Uniforms:
+            Diffuse:
+                Color:
+                    A:  1
+                    B:  0.30196
+                    G:  0.30196
+                    R:  0.30196
+                Color Map: ""
+                Use Texture: false
+            Emissive:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+            IndexOfRefraction: 1
+            Shininess: 128
+            Specular:
+                Color:
+                    A:  1
+                    B:  0.70196
+                    G:  0.70196
+                    R:  0.70196
+                Color Map: ""
+                Use Texture: false
+            Transmittence:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+    Green:
+        Shader: Blinn-Phong Shader
+        Uniforms:
+            Diffuse:
+                Color:
+                    A:  1
+                    B:  0.2
+                    G:  0.30196
+                    R:  0.14902
+                Color Map: ""
+                Use Texture: false
+            Emissive:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+            IndexOfRefraction: 1
+            Shininess: 111.02
+            Specular:
+                Color:
+                    A:  1
+                    B:  0.22353
+                    G:  0.22353
+                    R:  0.22353
+                Color Map: ""
+                Use Texture: false
+            Transmittence:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+    Orange:
+        Shader: Blinn-Phong Shader
+        Uniforms:
+            Diffuse:
+                Color:
+                    A:  1
+                    B:  0.2
+                    G:  0.49804
+                    R:  0.8
+                Color Map: ""
+                Use Texture: false
+            Emissive:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+            IndexOfRefraction: 1
+            Shininess: 20
+            Specular:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+            Transmittence:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+    Textured Material:
+        Shader: Textured Shader
+        Uniforms:
+            DiffuseMap:
+                Color:
+                    A:  1
+                    B:  0.5
+                    G:  0.5
+                    R:  0.5
+                Color Map: Checkers Texture
+                Use Texture: true
+    Toon Material:
+        Shader: Toon Shader
+        Uniforms:
+            Diffuse:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0.75
+                Color Map: ""
+                Use Texture: false
+            Emissive:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+            IndexOfRefraction: 1
+            Shininess: 20
+            Specular:
+                Color:
+                    A:  1
+                    B:  0.5
+                    G:  0.5
+                    R:  0.5
+                Color Map: ""
+                Use Texture: false
+            Transmittence:
+                Color:
+                    A:  1
+                    B:  0
+                    G:  0
+                    R:  0
+                Color Map: ""
+                Use Texture: false
+ShaderPrograms:
+    Blinn-Phong Shader:
+        Fragment: ""
+        Geometry: ""
+        Trace Compatible: true
+        Vertex: ""
+    Depth Shader:
+        Fragment: ""
+        Geometry: ""
+        Trace Compatible: false
+        Vertex: assets/internal/position.vert
+    Emissive Shader:
+        Fragment: assets/emissive.frag
+        Geometry: ""
+        Trace Compatible: false
+        Vertex: ""
+    Textured Shader:
+        Fragment: assets/texture.frag
+        Geometry: ""
+        Trace Compatible: false
+        Vertex: assets/texture.vert
+    Toon Shader:
+        Fragment: ""
+        Geometry: ""
+        Trace Compatible: true
+        Vertex: ""
+Root:
+    Name: Root
+    Enabled: true
+    Components:
+        Transform:
+            Rotation:
+                X:  0
+                Y:  0
+                Z:  0
+            Scale:
+                X:  1
+                Y:  1
+                Z:  1
+            Translation:
+                X:  0
+                Y:  0
+                Z:  0
+    Children:
+        -   Name: Floor
+            Enabled: true
+            Components:
+                Transform:
+                    Rotation:
+                        X:  1.5267e-13
+                        Y:  -1.7075e-06
+                        Z:  1.7075e-06
+                    Scale:
+                        X:  10
+                        Y:  0.25
+                        Z:  10
+                    Translation:
+                        X:  0
+                        Y:  0
+                        Z:  0
+                TriangleMesh:
+                    LoopSubdivision: 0
+                    Material: Gray
+                    Mesh: Cube
+            Children:
+                []
+        -   Name: Camera
+            Enabled: true
+            Components:
+                Transform:
+                    Rotation:
+                        X:  0
+                        Y:  20
+                        Z:  0
+                    Scale:
+                        X:  1
+                        Y:  1
+                        Z:  1
+                    Translation:
+                        X:  0
+                        Y:  0
+                        Z:  0
+            Children:
+                -   Name: Render Camera
+                    Enabled: true
+                    Components:
+                        Transform:
+                            Rotation:
+                                X:  -25
+                                Y:  0
+                                Z:  0
+                            Scale:
+                                X:  1
+                                Y:  1
+                                Z:  1
+                            Translation:
+                                X:  0
+                                Y:  3.5
+                                Z:  3
+                        Camera:
+                            FOV: 45
+                            Far Plane: 100
+                            Near Plane: 0.1
+                            Orthographic View Width: 5
+                            Perspective Camera?: true
+                            Render Height (px): 512
+                            Render Width (px): 512
+                            Trace:
+                                Aperture Size: 0
+                                Caustics: true
+                                Difference Threshold: 0.02
+                                Diffuse Reflection: true
+                                Enable BVH Acceleration: true
+                                Focus Distance: 1
+                                Maximum Recursion Depth: 3
+                                Maximum Samples: 2
+                                Minimum Samples: 0
+                                Monte Carlo: 0
+                                Random Single Branching: true
+                                Reflections: true
+                                Refractions: true
+                                Sample Count Type: 0
+                                Samples Per Pixel: 0
+                                Shadows: 2
+                                Std. Error Threshold: 0.02
+                            Trace Debugger:
+                                Show Diffuse Reflection Rays: true
+                                Show Reflection Rays: true
+                                Show Refraction Rays: true
+                                Show Shadow Rays: true
+                                Show Surface Normals: true
+                    Children:
+                        []
+        -   Name: pawn
+            Enabled: true
+            Components:
+                Transform:
+                    Rotation:
+                        X:  0
+                        Y:  0
+                        Z:  0
+                    Scale:
+                        X:  0.8
+                        Y:  0.8
+                        Z:  0.8
+                    Translation:
+                        X:  1.052
+                        Y:  0.62798
+                        Z:  -4.1381
+                TriangleMesh:
+                    LoopSubdivision: 0
+                    Material: Green
+                    Mesh: pawn
+            Children:
+                []
+        -   Name: knight
+            Enabled: true
+            Components:
+                Transform:
+                    Rotation:
+                        X:  0
+                        Y:  60.202
+                        Z:  0
+                    Scale:
+                        X:  0.6
+                        Y:  0.6
+                        Z:  0.6
+                    Translation:
+                        X:  0.018178
+                        Y:  0.67148
+                        Z:  -4.2975
+                TriangleMesh:
+                    LoopSubdivision: 0
+                    Material: Orange
+                    Mesh: knight
+            Children:
+                []
+        -   Name: table
+            Enabled: true
+            Components:
+                Transform:
+                    Rotation:
+                        X:  0
+                        Y:  0
+                        Z:  0
+                    Scale:
+                        X:  2.5
+                        Y:  2.5
+                        Z:  2.5
+                    Translation:
+                        X:  -4.1615
+                        Y:  -0.26396
+                        Z:  -4.8057
+            Children:
+                -   Name: Legs
+                    Enabled: true
+                    Components:
+                        Transform:
+                            Rotation:
+                                X:  0
+                                Y:  0
+                                Z:  0
+                            Scale:
+                                X:  1
+                                Y:  1
+                                Z:  1
+                            Translation:
+                                X:  0
+                                Y:  0
+                                Z:  0
+                    Children:
+                        -   Name: table leg 1
+                            Enabled: true
+                            Components:
+                                Transform:
+                                    Rotation:
+                                        X:  0
+                                        Y:  0
+                                        Z:  0
+                                    Scale:
+                                        X:  1
+                                        Y:  1
+                                        Z:  1
+                                    Translation:
+                                        X:  1.2654
+                                        Y:  0.80279
+                                        Z:  1.5378
+                                TriangleMesh:
+                                    LoopSubdivision: 0
+                                    Material: Brown
+                                    Mesh: table1
+                            Children:
+                                []
+                        -   Name: table leg 2
+                            Enabled: true
+                            Components:
+                                Transform:
+                                    Rotation:
+                                        X:  0
+                                        Y:  90
+                                        Z:  0
+                                    Scale:
+                                        X:  1
+                                        Y:  1
+                                        Z:  1
+                                    Translation:
+                                        X:  1.3135
+                                        Y:  0.80279
+                                        Z:  -0.41181
+                                TriangleMesh:
+                                    LoopSubdivision: 0
+                                    Material: Brown
+                                    Mesh: table1
+                            Children:
+                                []
+                        -   Name: table leg 3
+                            Enabled: true
+                            Components:
+                                Transform:
+                                    Rotation:
+                                        X:  0
+                                        Y:  180
+                                        Z:  0
+                                    Scale:
+                                        X:  1
+                                        Y:  1
+                                        Z:  1
+                                    Translation:
+                                        X:  -0.63614
+                                        Y:  0.80279
+                                        Z:  -0.4118
+                                TriangleMesh:
+                                    LoopSubdivision: 0
+                                    Material: Brown
+                                    Mesh: table1
+                            Children:
+                                []
+                        -   Name: table leg 4
+                            Enabled: true
+                            Components:
+                                Transform:
+                                    Rotation:
+                                        X:  0
+                                        Y:  270
+                                        Z:  0
+                                    Scale:
+                                        X:  1
+                                        Y:  1
+                                        Z:  1
+                                    Translation:
+                                        X:  -0.63612
+                                        Y:  0.80279
+                                        Z:  1.5137
+                                TriangleMesh:
+                                    LoopSubdivision: 0
+                                    Material: Brown
+                                    Mesh: table1
+                            Children:
+                                []
+                -   Name: tabletop
+                    Enabled: true
+                    Components:
+                        Transform:
+                            Rotation:
+                                X:  0
+                                Y:  0
+                                Z:  0
+                            Scale:
+                                X:  1
+                                Y:  1
+                                Z:  1
+                            Translation:
+                                X:  1.2598
+                                Y:  0.79513
+                                Z:  1.5429
+                        TriangleMesh:
+                            LoopSubdivision: 0
+                            Material: Dark brown
+                            Mesh: table2
+                    Children:
+                        []
+        -   Name: Light rotation
+            Enabled: true
+            Components:
+                Transform:
+                    Rotation:
+                        X:  0
+                        Y:  20
+                        Z:  0
+                    Scale:
+                        X:  1
+                        Y:  1
+                        Z:  1
+                    Translation:
+                        X:  0
+                        Y:  0
+                        Z:  0
+            Children:
+                -   Name: Key Light
+                    Enabled: true
+                    Components:
+                        Transform:
+                            Rotation:
+                                X:  65
+                                Y:  0
+                                Z:  0
+                            Scale:
+                                X:  1
+                                Y:  1
+                                Z:  1
+                            Translation:
+                                X:  5.39e-08
+                                Y:  4.1023
+                                Z:  4.1911
+                        DirectionalLight:
+                            Ambient:
+                                A:  1
+                                B:  0
+                                G:  0
+                                R:  0
+                            Angular Size (Trace): 0
+                            Color:
+                                A:  1
+                                B:  1
+                                G:  1
+                                R:  1
+                            Intensity Multiplier: 1
+                    Children:
+                        []
+                -   Name: Point Light 1
+                    Enabled: true
+                    Components:
+                        Transform:
+                            Rotation:
+                                X:  0
+                                Y:  -20
+                                Z:  0
+                            Scale:
+                                X:  1
+                                Y:  1
+                                Z:  1
+                            Translation:
+                                X:  -4.3708
+                                Y:  3.7809
+                                Z:  2.3866
+                        EnvironmentMap:
+                            Far Plane: 100
+                            Near Plane: 0.1
+                            Render Material: Depth Map Material
+                            Resolution (px): 400
+                        PointLight:
+                            Ambient:
+                                A:  1
+                                B:  0
+                                G:  0
+                                R:  0
+                            Color:
+                                A:  1
+                                B:  1
+                                G:  1
+                                R:  1
+                            Const Atten: 0.5
+                            Linear Atten: 0.8
+                            Quad Atten: 0.2
+                            Radius (Trace): 0
+                    Children:
+                        []

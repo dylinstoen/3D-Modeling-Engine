@@ -1,0 +1,30 @@
+#ifndef GROUPPROPERTY_H
+#define GROUPPROPERTY_H
+
+#include <properties/property.h>
+
+class GroupProperty : public Property
+{
+public:
+    Signal1<std::vector<Property*>> ValueSet;
+
+    GroupProperty(const std::string& name, std::vector<Property*> properties = std::vector<Property*>());
+
+    std::vector<Property*> Get() const;
+    Property* Get(const std::string& name);
+    void Set(const std::vector<Property *> &properties);
+
+    template<typename T>
+    void Set(const std::string& name, T data) {
+        if (properties_[name] != nullptr) {
+            properties_[name]->Set(data);
+        } else {
+            Debug::Log.WriteLine("Property " + name + " not found in Group Property " + GetName(), Priority::Error);
+        }
+    }
+private:
+    std::map<std::string, std::unique_ptr<Property>> properties_;
+};
+
+
+#endif // GROUPPROPERTY_H
